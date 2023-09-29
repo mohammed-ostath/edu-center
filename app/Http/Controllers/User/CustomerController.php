@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\customer;
+namespace App\Http\Controllers\User;
 
 use App\Models\Customer;
 use Illuminate\Http\Request;
@@ -59,14 +59,14 @@ class CustomerController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit($id)
-{
-    $customer = Customer::find($id);
+    {
+        $customer = Customer::find($id);
 
-    if (!$customer) {
-        return redirect()->route('customer.index')->with('error', 'Customer not found');
+        if (!$customer) {
+            return redirect()->route('customer.index')->with('error', 'Customer not found');
+        }
+        return view('pages.costomer.edit', ['customer' => $customer]);
     }
-    return view('pages.costomer.edit', ['customer' => $customer]);
-}
 
 
     /**
@@ -104,5 +104,10 @@ class CustomerController extends Controller
     {
         $customers = Customer::destroy($request->id);
         return redirect()->route('customer.index')->with('success', 'Customer deleted successfully');
+    }
+
+    public function sdash()
+    {
+        return view('pages.costomer.dashboard.dashboard');
     }
 }

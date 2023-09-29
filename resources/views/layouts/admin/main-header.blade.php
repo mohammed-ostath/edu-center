@@ -126,13 +126,13 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href=""><i class="text-info ti-settings"></i>Settings</a>
                         <a class="dropdown-item" href="#"><i class="text-danger ti-unlock"></i>
-                            <form action="{{ route('logout') }}" method="POST">
+                            {{-- <form action="{{ route('logout') }}" method="POST">
                             @csrf
                                 <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
                                 this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                 </x-dropdown-link>
-                            </form>
+                            </form> --}}
 
                                 {{-- @if(auth('costomer')->check())
                         <form method="GET" action="{{ route('logout','costomer') }}">

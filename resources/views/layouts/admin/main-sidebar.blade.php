@@ -23,29 +23,29 @@
                     <!--facultie -->
                     <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">{{ __('E-Commerce') }}</li>
                     <!-- menu item Elements-->
-                    {{-- <li>
+                    <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#elements">
                             <div class="pull-left"><i class="ti-palette"></i><span
-                                    class="right-nav-text">{{ __('Categorie') }}</span></div>
+                                    class="right-nav-text">{{ __('Categories') }}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
                         <ul id="elements" class="collapse" data-parent="#sidebarnav">
-                            <li><a href="{{ route('categorie.index') }}">Categorie</a></li>
-                            <li><a href="{{ route('categorie.create') }}">Create Categorie</a></li>
+                            <li><a href="{{ route('categories') }}">Show Categories</a></li>
+                            <li><a href="{{ route('categories.create') }}">Create Category</a></li>
 
                         </ul>
-                    </li> --}}
+                    </li>
                     {{-- start Product sidbar --}}
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#costomer">
                             <div class="pull-left"><i class="ti-palette"></i><span
-                                class="right-nav-text">{{ __('Customer') }}</span></div>
+                                class="right-nav-text">{{ __('Customers') }}</span></div>
                                 <div class="pull-right"><i class="ti-plus"></i></div>
                                 <div class="clearfix"></div>
                         </a>
                             <ul id="costomer" class="collapse" data-parent="#sidebarnav">
-                                <li><a href="{{ route('customer.index') }}">Show Customer</a></li>
+                                <li><a href="{{ route('customers') }}">Show Customer</a></li>
                                 <li><a href="{{ route('customers.create') }}">Create Customer</a></li>
 
                             </ul>

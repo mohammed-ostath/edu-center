@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,7 +13,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('Home.index');
+        $categories = Category::get();
+        return view('Home.index',compact('categories'));
     }
 
     public function selection(){
@@ -38,9 +40,10 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $categories = Category::findOrFail($id);
+        return view('Home.product-detail',compact('categories'));
     }
 
     /**
