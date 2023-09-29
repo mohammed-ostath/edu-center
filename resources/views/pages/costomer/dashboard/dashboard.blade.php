@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-Dashboard Costomers
+Dashboard Customers
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    Dashboard Costomers
+    Dashboard Customers
 @stop
 <!-- breadcrumb -->
 @endsection

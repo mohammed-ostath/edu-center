@@ -3,7 +3,7 @@
         <nav class="admin-header navbar navbar-default col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <!-- logo -->
             <div class="text-left navbar-brand-wrapper">
-                <a class="navbar-brand brand-logo" href="{{ route('dashboard') }}"><img src="{{ URL::asset('assets/images/ECommerce.png') }}" alt=""> </a>
+                {{-- <a class="navbar-brand brand-logo" href="{{ route('dashboard') }}"><img src="{{ URL::asset('assets/images/ECommerce.png') }}" alt=""> </a> --}}
                 <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{URL::asset('assets/images/logo-icon-dark.png')}}"
                         alt=""></a>
             </div>
@@ -53,9 +53,9 @@
                     <a class="nav-link top-nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                         aria-expanded="false">
                         <i class="ti-bell"></i>
-                        <span class="badge badge-danger notification-status">{{ auth('costomer')->user()->unreadNotifications->count() }} </span>
+                        {{-- <span class="badge badge-danger notification-status">{{ auth('costomer')->user()->unreadNotifications->count() }} </span> --}}
                     </a>
-                    @foreach (auth('costomer')->user()->unreadNotifications as $notification )
+                    {{-- @foreach (auth('costomer')->user()->unreadNotifications as $notification )
                     <div class="dropdown-menu dropdown-menu-right dropdown-big dropdown-notifications">
 
 
@@ -75,7 +75,7 @@
                         <a href="#" class="dropdown-item">Order confirmation<small class="float-right text-muted time">2
                                 days</small> </a>
                             </div>
-                    @endforeach
+                    @endforeach --}}
                 </li>
                 {{-- End Notifications --}}
                 <li class="nav-item dropdown ">
@@ -114,8 +114,8 @@
                         <div class="dropdown-header">
                             <div class="media">
                                 <div class="media-body">
-                                    <h5 class="mt-0 mb-0">{{ Auth('costomer')->user()->name }}</h5>
-                                    <span>{{ Auth('costomer')->user()->email }}</span>
+                                    <h5 class="mt-0 mb-0">{{ Auth('customer')->user()->name }}</h5>
+                                    <span>{{ Auth('customer')->user()->email }}</span>
                                 </div>
                             </div>
                         </div>
@@ -136,8 +136,8 @@
                                 </x-dropdown-link>
                             </form> --}}
 
-                                @if(auth('costomer')->check())
-                        <form method="GET" action="{{ route('logout','costomer') }}">
+                                @if(auth('customer')->check())
+                        <form method="GET" action="{{ route('logout','customer') }}">
                                     @else
                                     <form method="GET" action="{{ route('logout','web') }}">
                                         @endif

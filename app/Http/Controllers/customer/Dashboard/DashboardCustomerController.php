@@ -1,23 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Home;
+namespace App\Http\Controllers\customer\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class DashboardCustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('Home.index');
+        return view('pages.costomer.dashboard.dashboard');
+        
     }
-
-    public function selection(){
-        return view('auth.selection');
-     }
 
     /**
      * Show the form for creating a new resource.
