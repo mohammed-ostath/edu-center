@@ -58,14 +58,18 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
+
     public function show($id)
     {
-        $customers = Customer::all();
-        $categories = Category::all();
-        $products = Product::find($id);
-        return view('Home.product-detail', compact('products', 'categories', 'customers'));
+        $categories=Category::all();
+        $product=Product::find($id);
+        return view('Home.product-detail',[
+            'product'=>$product,
+            'categories'=>$categories,
+            'products'=>Product::all(),
+            'customer'=>Customer::all()
+        ]);
     }
-
     /**
      * Show the form for editing the specified resource.
      */

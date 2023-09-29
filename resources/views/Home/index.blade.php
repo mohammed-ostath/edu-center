@@ -23,6 +23,8 @@ Home
                     <div class="brand-item"><img src="{{ URL::asset('temp/img/brand-4.png') }}" alt=""></div>
                     <div class="brand-item"><img src="{{ URL::asset('temp/img/brand-5.png') }}" alt=""></div>
                     <div class="brand-item"><img src="{{ URL::asset('temp/img/brand-6.png') }}" alt=""></div>
+                    <div class="brand-item"><img src="{{ URL::asset('temp/img/brand-2.png') }}" alt=""></div>
+                    <div class="brand-item"><img src="{{ URL::asset('temp/img/brand-1.png') }}" alt=""></div>
 
                 </div>
             </div>
@@ -82,7 +84,7 @@ Home
                         <div class="category-item ch-400">
                             <img src="/temp/img/category-3.jpg" />
                             <a class="category-name" href="">
-                                <p>mahmoud</p>
+                                <p>mohammed</p>
                             </a>
                         </div>
                     </div>
@@ -135,7 +137,7 @@ Home
                         <h1>call us for any queries</h1>
                     </div>
                     <div class="col-md-6">
-                        <a href="tel:0123456789">+012-345-6789</a>
+                        <a href="tel:0123456789">+972569300640</a>
                     </div>
                 </div>
             </div>
@@ -173,12 +175,12 @@ Home
                                 </div>
                             </div>
                             <div class="product-price">
-                                {{-- <h3><span>$</span>{{ $product->price }}</h3> --}}
-                                {{-- <a class="btn" href="{{ route('product.show',$product->id) }}"><i class="fa fa-shopping-cart"></i>Buy Now</a> --}}
+                                <h3><span>$</span>{{ $product->price }}</h3>
+                                {{-- <a class="btn" href="{{ route('products.show',$product->id) }}"><i class="fa fa-shopping-cart"></i>Buy Now</a> --}}
                             </div>
                         </div>
                     </div>
-                    {{-- @endforeach --}}
+                    @endforeach
                     <div class="col-lg-3">
                         <div class="product-item">
                             <div class="product-title">

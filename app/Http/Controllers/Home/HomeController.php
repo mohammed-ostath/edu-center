@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Home;
 
-use App\Http\Controllers\Controller;
+use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,8 @@ class HomeController extends Controller
     public function index()
     {
         $categories = Category::get();
-        return view('Home.index',compact('categories'));
+        $products = Category::get();
+        return view('Home.index',compact('products'));
     }
 
     public function selection(){
@@ -26,7 +28,10 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        return view('Home.cart',[
+            'product'=>Product::all(),
+            'categories'=>Category::all()
+        ]);
     }
 
     /**
@@ -42,8 +47,12 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        $categories = Category::findOrFail($id);
-        return view('Home.product-detail',compact('categories'));
+        $categories=Category::find($id);
+        return view('Home.product-detail',[
+            'category'=>$categories,
+        ]);
+        // $categories = Category::findOrFail($id);
+        // return view('Home.product-detail',compact('categories'));
     }
 
     /**
