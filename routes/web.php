@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Category\CategoryController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\customer\Dashboard\DashboardCustomerController;
+use App\Http\Controllers\Product\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,11 +51,12 @@ Route::group([
 
     Route::get('/selection', [HomeController::class, 'selection'])->name('selection');
 
-    Route::resource('/dashboard', DashboardController::class)->name('index', 'admin.dashboard.index')->middleware(['auth', 'verified']);
+    Route::resource('/dashboard', DashboardController::class)->name('index', 'dashboard')->middleware(['auth', 'verified']);
     Route::resource('/', HomeController::class)->name('index', 'home.index');
     Route::resource('/customers', CustomerController::class)->name('index', 'customers');
     Route::resource('/sdash', CustomerController::class)->name('sdash', 'sdash');
     Route::resource('/categories', CategoryController::class)->name('index', 'categories');
+    Route::resource('/products', ProductController::class)->name('index', 'products');
 });
 
 

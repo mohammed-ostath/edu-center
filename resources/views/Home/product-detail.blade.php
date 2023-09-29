@@ -74,9 +74,9 @@ Product
                                                 <option type="button"  class="btn">Blue</option>
                                             </select>
                                         </div>
-                                        <input type="hidden" name="costomer_id" value="{{ $product->costomer_id }}">
+                                        <input type="hidden" name="costomer_id" value="{{ $product->customer_id }}">
                                         <input type="hidden" name="user_id" value="{{ $product->user_id }}">
-                                        <input type="hidden" name="categorie_id" value="{{ $product->categories->id }}">
+                                        <input type="hidden" name="category_id" value="{{ $product->category->id }}">
                                         <input type="hidden" name="product_id" value="{{ $product->id }}">
 
                                         <div class="action">
@@ -266,10 +266,10 @@ Product
                         <div class="sidebar-widget category">
                             <h2 class="title">Category</h2>
                             <nav class="navbar bg-light">
-                                @foreach ($categories as $categorie )
+                                @foreach ($categories as $category )
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('categorie.show',$categorie->id) }}"><i class="fa fa-female"></i>{{ $categorie->name }}</a>
+                                        <a class="nav-link" href="{{ route('categories.show',$category->id) }}"><i class="fa fa-female"></i>{{ $categorie->name }}</a>
                                     </li>
                                 </ul>
                                 @endforeach
